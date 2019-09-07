@@ -22,17 +22,17 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "EchoBot/1.0.0": {
+      "PAXTTBot/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.Bot.Builder.Integration.AspNet.Core": "4.5.1",
           "Microsoft.NETCore.App": "2.1.0"
         },
         "runtime": {
-          "EchoBot.dll": {}
+          "PAXTTBot.dll": {}
         },
         "compile": {
-          "EchoBot.dll": {}
+          "PAXTTBot.dll": {}
         }
       },
       "Microsoft.Bot.Builder/4.5.1": {
@@ -3447,7 +3447,7 @@
     }
   },
   "libraries": {
-    "EchoBot/1.0.0": {
+    "PAXTTBot/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

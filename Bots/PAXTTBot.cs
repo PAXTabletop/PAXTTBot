@@ -9,7 +9,7 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Bots
 {
-    public class EchoBot : ActivityHandler
+    public class PAXTTBot : ActivityHandler
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
