@@ -12,10 +12,14 @@ namespace Microsoft.BotBuilderSamples.Bots
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            if (turnContext.Activity.Text.Contains("say hello")) {
+            string message = turnContext.Activity.Text;
+            string matchMessage = message.ToLower();
+            ChannelAccount sender = turnContext.Activity.From;
+
+            if (matchMessage.Contains("say hello")) {
                 await turnContext.SendActivityAsync(MessageFactory.Text("Hello, my name is PAXTTBot!"), cancellationToken);
             } else {
-                await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: <{turnContext.Activity.Text}>"), cancellationToken);
+                await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: <{message}> , from: {sender.Name + ' ' + sender.Id + ' ' + sender.Properties}"), cancellationToken);
             }
         }
     }
